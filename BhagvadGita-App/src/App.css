@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Michroma", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 5%;
+  background-color: #000000;
+}
+
+.head-title{
+  color: white;
+    font-size: large;
+    padding: 20px 0;
+}
+
+.sub-container {
+  height: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 60px;
+}
+
+.card{
+  width: 80px;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1.5px solid #007bff;
+  margin: 0 10px;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+
+/* .card {
+  padding: 20px;
+  width: calc(31.33% - 20px); 
+  margin-bottom: 20px; 
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 10px;
+  border: 3px solid #01bbff4f;
+  color: white;
+} */
+
+.chapter-No{
+  background: #223;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chapter-No h1{
+  padding: 15px;
+  font-size: 10px;
+}
+
+
+.chapter-details h3{
+  color: white;
+  opacity: 0;
+  margin-bottom: 20px;
+}
+
+.chapter-details p{
+  color: white;
+  margin-bottom: 20px;
+  opacity: 0;
+}
+
+.view-chapter-button{
+  color: white;
+  background-color: #007bff26;
+  margin-top: 20px;
+  padding: 5px 15px;
+  opacity: 0;
+  text-decoration: none;
+  border-radius: 12px;
+  border-bottom: 1.5px solid #007bfffb;
+  color: #007bfffb;
+}
+
+.chapter-details{
+  padding: 20px 0 25px 0;
+}
+
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 600px;
+}
+
+input:checked + label .cards h3 {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+input:checked + label .cards p {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+input:checked + label .cards .view-chapter-button {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.details-div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* header img */
+.main-div{
+  width: 100%;
+  height: 100vh;
+}
+
+.main-div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-div::after{
+  content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+        to top, #000000 10%, transparent
+    );
+}
+
+.text-area{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+  width: 500px;
+  max-width: 80%;
+  z-index: 1;
+}
+
+/* lable no */
+.card[for="c3"] {
+  /* background-color: red; */
+}
+
+.cards{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 100%;
+  padding: 0 10px;
+}
+
+
+/* home page responsive */
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card{
+    height: 150px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    border-radius: 8px;
+  border: 1.5px solid #007bff;
+    transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+  .sub-container {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 60px;
+  }
+  .chapter-No h1{
+    padding: 15px;
+    font-size: 10px;
+  }
+  
+  
+  .chapter-details h3{
+    color: white;
+    opacity: 1;
+    margin-bottom: 10px;
+  }
+  
+  .chapter-details p{
+    color: white;
+    margin-bottom: 15px;
+    opacity: 1;
+  }
+  
+  .view-chapter-button{
+    color: white;
+    background-color: #007bff26;
+    margin-top: 20px;
+    padding: 5px 15px;
+    opacity: 1;
+    text-decoration: none;
+    border-radius: 12px;
+    border-bottom: 1.5px solid #007bfffb;
+    color: #007bfffb;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card{
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+  border: 1.5px solid #007bff;
+    margin: 0;
+    transition:none;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+    z-index: 9;
+  }
+  .sub-container {
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 60px;
+  }
+}

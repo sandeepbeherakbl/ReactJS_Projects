@@ -1,0 +1,72 @@
+.slokacontainer {
+    margin: 20px 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar {
+    width: 200px; /* Adjust as needed */
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .verse-buttons-container {
+    height: 80vh; /* Set height to 100vh */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    padding-right: 10px; /* Add space for scrollbar */
+  }
+  
+  .verse-buttons {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column layout */
+    padding-right: 20px; /* Add space for scrollbar */
+  }
+  
+  .verse-buttons button {
+    margin-bottom: 5px; /* Add space between buttons */
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .verse-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Customize scrollbar */
+  .verse-buttons-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .verse-buttons-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  
+  .verse-buttons-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  .verse-buttons button.active {
+    background-color: #003d7d;
+  }
+
+  .chapter-details-sloaks{
+    border: 1px solid red;
+    margin-bottom: 20px;
+  }
+
+  .sloka-container{
+    border: 1px solid red;
+  }
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
