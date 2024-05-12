@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import "../App.css";
-import "./Chapter.css"
+import "./Chapter.css";
 import axios from "axios";
+import ChapterHead from "../assets/Chapterpage.jpg";
+import GalaxyBackground from "./StarBackground";
 
 export const ChapterSlokas = ({ location }) => {
   const { chapterNumber, verses } = location.state;
@@ -12,11 +13,14 @@ export const ChapterSlokas = ({ location }) => {
 
   const [chapterDetails, setChapterDetails] = useState({});
   const [sloka, setSloka] = useState("");
-  const [activeButton, setActiveButton] = useState(1);
+  // const [activeButton, setActiveButton] = useState(1);
+  const [currentVerse, setCurrentVerse] = useState(1); // Track current verse number
+  const totalVerses = verses; // Total number of verses
+  console.log("totalverse :- ", totalVerses);
 
   useEffect(() => {
     fetchChapterDetails();
-    fetchSloka(chapterNumber, activeButton);
+    fetchSloka(chapterNumber, currentVerse);
   }, []);
 
   const fetchChapterDetails = async () => {
@@ -38,68 +42,113 @@ export const ChapterSlokas = ({ location }) => {
       );
       // console.log("fetch response :- ", response);
       setSloka(response.data);
-      setActiveButton(verse);
+      setCurrentVerse(verse);
     } catch (error) {
       console.error("Error fetching sloka: ", error);
     }
   };
 
+  const handleNextVerse = () => {
+    console.log("Next Button Clicked");
+    if (currentVerse < totalVerses) {
+      const nextVerse = currentVerse + 1;
+      console.log("nextverse :- ", nextVerse);
+      fetchSloka(chapterNumber, nextVerse); // Fetch next verse
+    }
+  };
+
+  const handlePrevVerse = () => {
+    if (currentVerse > 1) {
+      const prevVerse = currentVerse - 1;
+      fetchSloka(chapterNumber, prevVerse); // Fetch previous verse
+    }
+  };
+
   return (
     <>
-      <div className="slokacontainer">
-        <div className="navbar">
-          <h2>Chapter {chapterNumber}</h2>
-          <div className="verse-buttons-container">
-            <div className="verse-buttons">
-              {Array.from({ length: verses }, (_, index) => (
-                <button
-                  key={index + 1}
-                  onClick={() => fetchSloka(chapterNumber, index + 1)}
-                  className={activeButton === index + 1 ? "active" : ""}
-                >
-                  Verses {index + 1}
-                </button>
-              ))}
+      <div className="chapter-sloka-main-div">
+        {/* <GalaxyBackground /> */}
+        <div className="chapter-header">
+          <div className="chapter-main-div">
+            <div className="chapter-text-area">
+              <h2>Chapter {chapterNumber}.</h2>
+              <p style={{marginBottom: "5px"}}>{chapterDetails.name}</p>
+
+              {chapterDetails.meaning && (
+                <>
+                  {chapterDetails.meaning.hi && (
+                    <p style={{display: "none"}} >Meaning (Hindi): {chapterDetails.meaning.hi}</p>
+                  )}
+                  {chapterDetails.meaning.en && (
+                    <p style={{marginBottom: "20px"}}>{chapterDetails.meaning.en}</p>
+                  )}
+                </>
+              )}
+
+              <h3 style={{marginBottom: "10px", fontWeight: "normal"}}>Summary</h3>
+              {chapterDetails.summary && (
+                <>
+                  {chapterDetails.summary.hi && (
+                    <p style={{display: "none"}} >Summary (Hindi): {chapterDetails.summary.hi}</p>
+                  )}
+                  {chapterDetails.summary.en && (
+                    <p className="text-summary">{chapterDetails.summary.en}</p>
+                  )}
+                </>
+              )}
+              {/* <p>{chapterDetails.translation}</p>
+              <p>{chapterDetails.transliteration}</p> */}
+              <p style={{marginTop: "20px"}}>Total Verses : {chapterDetails.verses_count}</p>
+            </div>
+            <div className="heade-img">
+              <img src={ChapterHead} alt="" />
             </div>
           </div>
         </div>
-        <div className="details-div">
-          <div className="chapter-details-sloaks">
-            <h2>Chapter {chapterNumber} Details</h2>
-            <p>{chapterDetails.name}</p>
 
-            {chapterDetails.meaning && (
-              <>
-                {chapterDetails.meaning.hi && (
-                  <p>Meaning (Hindi): {chapterDetails.meaning.hi}</p>
-                )}
-                {chapterDetails.meaning.en && (
-                  <p>Meaning (English): {chapterDetails.meaning.en}</p>
-                )}
-              </>
-            )}
-            {chapterDetails.summary && (
-              <>
-                {chapterDetails.summary.hi && (
-                  <p>Summary (Hindi): {chapterDetails.summary.hi}</p>
-                )}
-                {chapterDetails.summary.en && (
-                  <p>Summary (English): {chapterDetails.summary.en}</p>
-                )}
-              </>
-            )}
-
-            {/* {chapterDetails.summary && chapterDetails.summary.en && (
-              <p>Summary: {chapterDetails.summary.en}</p>
-            )} */}
-            <p>{chapterDetails.translation}</p>
-            <p>{chapterDetails.transliteration}</p>
-            <p>{chapterDetails.verses_count}</p>
+        <div className="chapter-body">
+          <div className="navbar">
+            <h2>Chapter {chapterNumber}, Verses</h2>
+            <div className="verse-buttons-container">
+              <div className="verse-buttons">
+                {Array.from({ length: verses }, (_, index) => (
+                  <button
+                    key={index + 1}
+                    onClick={() => fetchSloka(chapterNumber, index + 1)}
+                    className={currentVerse === index + 1 ? "active" : ""}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="sloka-container">
-            <h2>Sloka {activeButton} :</h2>
-            <p>{sloka.slok}</p>
-            <p>{sloka.transliteration}</p>
+          <div className="navigation-sloka-div">
+            <div className="sloka-container">
+              <h2>Sloka {currentVerse} :</h2>
+              <p>{sloka.slok}</p>
+              <p>{sloka.transliteration}</p>
+            </div>
+
+            <div className="verse-navigation">
+              <button
+                onClick={handlePrevVerse}
+                disabled={currentVerse === 1}
+                className="next-button animate"
+              >
+                &laquo;{" "}
+              </button>
+              <div>
+                Verse {currentVerse} / {totalVerses}
+              </div>
+              <button
+                onClick={handleNextVerse}
+                disabled={currentVerse === totalVerses}
+                className="prev-button animate"
+              >
+                &raquo;
+              </button>
+            </div>
           </div>
         </div>
       </div>

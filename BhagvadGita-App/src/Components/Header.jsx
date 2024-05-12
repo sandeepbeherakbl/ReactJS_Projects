@@ -7,9 +7,10 @@ export const Header = () => {
       <div className="main-div">
         <img src={HeadImg} alt="" />
         <div className="text-area">
-            <h1>Titel</h1>
+            <h1>Bhagavad Gita</h1>
+            <h3>The Devine Song of God.</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia enim voluptatem, delectus corrupti eum culpa ipsa placeat vel quisquam accusantium? Soluta, rerum eveniet.
+            Timeless Wisdom for Life's Journey. A profound Hindu scripture, it offers philosophical insights and spiritual guidance through a dialogue between Lord Krishna and Prince Arjuna on duty, righteousness, and the path to liberation. Its teachings resonate across cultures, illuminating the essence of existence and human purpose.
             </p>
         </div>
       </div>

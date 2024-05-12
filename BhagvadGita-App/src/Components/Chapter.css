@@ -1,72 +1,199 @@
-.slokacontainer {
-    margin: 20px 20px;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar {
-    width: 200px; /* Adjust as needed */
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-  
-  .verse-buttons-container {
-    height: 80vh; /* Set height to 100vh */
-    overflow-y: auto; /* Enable vertical scrollbar */
-    padding-right: 10px; /* Add space for scrollbar */
-  }
-  
-  .verse-buttons {
-    display: flex;
-    flex-direction: column; /* Arrange buttons in a column layout */
-    padding-right: 20px; /* Add space for scrollbar */
-  }
-  
-  .verse-buttons button {
-    margin-bottom: 5px; /* Add space between buttons */
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .verse-buttons button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Customize scrollbar */
-  .verse-buttons-container::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .verse-buttons-container::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
-  
-  .verse-buttons-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-  
-  .verse-buttons button.active {
-    background-color: #003d7d;
-  }
+.chapter-sloka-main-div {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  overflow: hidden;
+}
 
-  .chapter-details-sloaks{
-    border: 1px solid red;
-    margin-bottom: 20px;
-  }
+.chapter-header {
+  /* border: 1px solid red; */
+}
 
-  .sloka-container{
-    border: 1px solid red;
-  }
+.chapter-main-div {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50%;
+}
+
+.chapter-main-div .heade-img img {
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+  display: block;
+}
+
+.chapter-main-div .heade-img {
+  content: "";
+  background-image: linear-gradient(to right, #000000 5%, transparent, #000000);
+}
+
+.chapter-text-area {
+  width: 100%;
+  background-color: #000000;
+  padding: 20px;
+}
+
+.chapter-body {
+  width: 100%;
+  background-color: #000000;
+  /* display: flex; */
+}
+
+.chapter-text-area h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.navbar {
+  width: 100%;
+  /* overflow-y: scroll; */
+  /* height: 100%; */
+  padding: 20px;
+}
+
+.navbar h2 {
+  margin-bottom: 20px;
+}
+
+.verse-buttons-container {
+  width: 100%;
+}
+
+.verse-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.verse-buttons button {
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 9;
+}
+
+.verse-buttons button.active {
+  background-color: #003d7d;
+}
+
+.navigation-sloka-div {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sloka-container {
+  background: rgba(255, 255, 255, 0.057);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 12px;
+  border: 1.5px solid #01bbff4f;
+  color: white;
+  padding: 30px 50px;
+}
+
+.verse-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  z-index: 9;
+  margin-top: 40px;
+}
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
 
+  .chapter-body {
+    padding-top: 40px;
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .navigation-sloka-div {
+    width: 80%;
+    margin-left: 7%;
+    max-width: 768px;
+  }
+  .sloka-container {
+    padding: 10px 20px;
+  }
+
+  .sloka-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .sloka-container p {
+    font-size: 11px;
+    margin: 10px 0;
+  }
+
+  .chapter-text-area {
+    background-image: linear-gradient(
+        to top,
+        #000000 5%,
+        #00000065,
+        #000000
+      ),
+      url("../assets/MobileChapter.jpg");
+      width: 100%;
+    /* height: 400px; */
+    background-size: cover;
+    color: white;
+    padding: 20px;
+  }
+
+  .heade-img {
+    display: none;
+  }
+
+  .text-summary{
+    font-size: 11px;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
 
+  .chapter-body {
+    padding-top: 40px;
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .navigation-sloka-div {
+    width: 80%;
+    margin-left: 8%;
+    max-width: 768px;
+  }
+  .sloka-container {
+    padding: 10px 20px;
+  }
+
+  .sloka-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .sloka-container p {
+    font-size: 11px;
+    margin: 10px 0;
+  }
 }

@@ -153,10 +153,27 @@ input:checked + label .cards .view-chapter-button {
 .text-area{
   position: absolute;
   left: 10%;
-  top: 30%;
+  top: 20%;
   width: 500px;
   max-width: 80%;
   z-index: 1;
+}
+
+.text-area h1{
+  font-size: 80px;
+  color: white;
+}
+
+.text-area h3{
+  font-size: 30px;
+  margin: 20px 0;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.text-area p{
+  font-size: 14px;
+  color: white;
 }
 
 /* lable no */
@@ -171,6 +188,7 @@ input:checked + label .cards .view-chapter-button {
   height: 100%;
   padding: 0 10px;
 }
+
 
 
 /* home page responsive */
