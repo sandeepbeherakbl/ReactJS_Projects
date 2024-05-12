@@ -4,19 +4,19 @@ import "./Chapter.css";
 import axios from "axios";
 import ChapterHead from "../assets/Chapterpage.jpg";
 import GalaxyBackground from "./StarBackground";
+import { useLocation } from "react-router-dom";
 
-export const ChapterSlokas = ({ location }) => {
+export const ChapterSlokas = () => {
+  const location = useLocation();
   const { chapterNumber, verses } = location.state;
 
-  // console.log("chapter number ---- ", chapterNumber),
-  // console.log("verses ---- ", verses)
+  console.log("chapter number ---- ", chapterNumber),
+  console.log("verses ---- ", verses)
 
   const [chapterDetails, setChapterDetails] = useState({});
   const [sloka, setSloka] = useState("");
-  // const [activeButton, setActiveButton] = useState(1);
-  const [currentVerse, setCurrentVerse] = useState(1); // Track current verse number
-  const totalVerses = verses; // Total number of verses
-  console.log("totalverse :- ", totalVerses);
+  const [currentVerse, setCurrentVerse] = useState(1);
+  const totalVerses = verses;
 
   useEffect(() => {
     fetchChapterDetails();
@@ -24,9 +24,11 @@ export const ChapterSlokas = ({ location }) => {
   }, []);
 
   const fetchChapterDetails = async () => {
+    console.log("fetch details")
     try {
+      console.log("fetch-details-response")
       const response = await axios.get(
-        `https://bhagavadgitaapi.in/chapter/${chapterNumber}`
+        `/chapter/${chapterNumber}`
       );
       console.log("chapter response :- ", response.data);
       setChapterDetails(response.data);
@@ -36,11 +38,13 @@ export const ChapterSlokas = ({ location }) => {
   };
 
   const fetchSloka = async (chapter, verse) => {
+    console.log("fetch sloka")
     try {
+      console.log("fetch-sloka response")
       const response = await axios.get(
-        `https://bhagavadgitaapi.in/slok/${chapter}/${verse}`
+        `/slok/${chapter}/${verse}`
       );
-      console.log("fetch response :- ", response);
+      console.log("fetch response :- ", response.data);
       setSloka(response.data);
       setCurrentVerse(verse);
     } catch (error) {
@@ -52,22 +56,21 @@ export const ChapterSlokas = ({ location }) => {
     console.log("Next Button Clicked");
     if (currentVerse < totalVerses) {
       const nextVerse = currentVerse + 1;
-      console.log("nextverse :- ", nextVerse);
-      fetchSloka(chapterNumber, nextVerse); // Fetch next verse
+      fetchSloka(chapterNumber, nextVerse); 
     }
   };
 
   const handlePrevVerse = () => {
     if (currentVerse > 1) {
       const prevVerse = currentVerse - 1;
-      fetchSloka(chapterNumber, prevVerse); // Fetch previous verse
+      fetchSloka(chapterNumber, prevVerse);
     }
   };
 
   return (
     <>
       <div className="chapter-sloka-main-div">
-        {/* <GalaxyBackground /> */}
+        <GalaxyBackground />
         <div className="chapter-header">
           <div className="chapter-main-div">
             <div className="chapter-text-area">
