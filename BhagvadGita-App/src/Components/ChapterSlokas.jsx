@@ -40,7 +40,7 @@ export const ChapterSlokas = ({ location }) => {
       const response = await axios.get(
         `https://bhagavadgitaapi.in/slok/${chapter}/${verse}`
       );
-      // console.log("fetch response :- ", response);
+      console.log("fetch response :- ", response);
       setSloka(response.data);
       setCurrentVerse(verse);
     } catch (error) {
