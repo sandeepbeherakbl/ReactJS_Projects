@@ -187,6 +187,12 @@ const Planets = () => {
           <div data-depth="0.1" className="text">
             <h1>SANDEEP BEHERA</h1>
             <h3>Full Stack Web Developer</h3>
+            <p>
+              With proficiency in JavaScript libraries such as React and
+              Next.js, along with a flair for high-impact creative design, I
+              excel in crafting dynamic and visually captivating digital
+              experiences.
+            </p>
           </div>
           <div data-depth="0.4" className="mid">
             <img src={Mid} alt="Mid" />
@@ -204,12 +210,38 @@ const Planets = () => {
       <div style={{ height: "100vh" }}>
         <div className="about-container container-background">
           <div className="container-text">
-            <h1>Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
-              nesciunt quas natus nostrum molestiae suscipit ab earum quisquam
-              dolorem quam.
-            </p>
+            <h1>About</h1>
+
+            <div className="About-text-desc">
+              <h3>Hello,</h3>
+              <p>
+                I'm Sandeep Kumar Behera, a BTech graduate from Bhubaneswar,
+                Odisha, deeply passionate about web development. My journey into
+                this dynamic field commenced during my college days, igniting a
+                spark within me that has since evolved into a blazing passion.
+                With every line of code I write, I strive to infuse creativity
+                and innovation, crafting websites that transcend mere
+                functionality to become immersive digital experiences.
+              </p>
+              <br />
+              <p>
+                Driven by my love for design, I specialize in creating
+                high-impact, pixel-perfect UIs that captivate users from the
+                moment they land on a page. Beyond technical proficiency, my
+                greatest strength lies in my ability to seamlessly blend
+                cutting-edge technologies with aesthetically pleasing designs,
+                resulting in visually stunning websites that leave a lasting
+                impression.
+              </p>
+              <br />
+              <p>
+                When I'm not immersed in the world of web development, you'll
+                often find me embarking on new adventures, exploring the world
+                one destination at a time. Let's collaborate to turn your
+                digital vision into a reality that resonates with audiences and
+                stands the test of time.
+              </p>
+            </div>
           </div>
           <div className="container-image-div"></div>
         </div>
@@ -219,16 +251,12 @@ const Planets = () => {
       <div style={{ height: "100vh" }}>
         <div className="skills-container container-background">
           <div className="container-text">
-            <h1>Lorem, ipsum dolor.</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad
-              nesciunt quas natus nostrum molestiae suscipit ab earum quisquam
-              dolorem quam.
-            </p>
+            <h1>Skills</h1>
           </div>
           <div className="container-image-div">
             <div className="skills-div">
               <img src={React} alt="" />
+              <p>React</p>
             </div>
           </div>
         </div>
