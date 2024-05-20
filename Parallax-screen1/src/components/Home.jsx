@@ -223,6 +223,7 @@ const Planets = () => {
                 and innovation, crafting websites that transcend mere
                 functionality to become immersive digital experiences.
               </p>
+              
               <p>
                 Driven by my love for design, I specialize in creating
                 high-impact, pixel-perfect UIs that captivate users from the
