@@ -7,15 +7,15 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: normal;
+    
 }
 
 body{
-    background-color: #262626;
+    /* background-color: #262626; */
+    
 }
 
-.App {
-    text-align: center;
-  }
+
   
 
 footer {

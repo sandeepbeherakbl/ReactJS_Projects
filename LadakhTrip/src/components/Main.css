@@ -1,128 +1,300 @@
-/* src/App.css */
-
-
-
-
 /* src/components/HomePage.css */
+/* src/components/Main.css */
 .home {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.346) 0%, rgba(0, 0, 0, 0.831) 100%),
+  url(../assets/desktop.jpg) no-repeat center center fixed;  background-size: cover;
 }
 
 .image-gallery {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.image-gallery img {
-  width: 100%;
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 10px;
+.image-gallery h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: rgb(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.image-gallery p{
+  color:white ;
+  margin: 0;
+  margin-top: -15px;
 }
 
 .itinerary-link {
-  margin-top: 20px;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #181525;
+  color: #CBCBCB;
+  border-radius: 12px;
+  height: auto;
+  margin: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .itinerary-link a {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  padding: 5px 10px;
+  background-color: #783FEF;
+  color: rgb(255, 255, 255);
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  width: 90%;
+  text-align: center;
 }
 
-.itinerary-link a:hover {
-  background-color: #0056b3;
+.quotes{
+  padding: 10px;
+  font-size: 24px;
+}
+
+.quotes p{
+  font-weight: 400;
+}
+
+.small-quotes{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5px;
+  font-size: 10px;
+  color: #838383;
+}
+.link-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 /* src/components/ItineraryPage.css */
-.iti-main-div{
-  height: calc(100vh - 30px);
-  margin-top: 15px;
-  border-radius: 12px;
-  width: 96%;
-  margin-left: 2%;
+/* src/components/Main.css */
+.itinerary-page {
+  padding: 10px;
+  height: calc(100vh - 20px);
   background-color: #181525;
-  overflow-y: scroll;
 }
 
-.iti-sub-div{
-  padding: 5px 0;
-}
-
-.iti-title{
+.details-trip{
+  margin: 15px 0;
   display: flex;
+  gap: 5px;
+  font-size: 12px;
+  justify-content: center;
   align-items: center;
 }
 
-.iti-title h1{
-  width: 100%;
+.details-trip p{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  border-radius: 12px;
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: bold;
+  height: 18px;
+}
+
+
+.iti-header {
+  display: flex;
+  margin-bottom: 5px;
+  color: #CBCBCB;
+}
+
+.iti-header a {
+  margin-right: 10px;
+}
+
+.tab-container {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  gap: 2%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.tab-container div {
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #22252D;
+  color: #838383;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tab-container div.active {
+  color: white;
+  background-color: #2E323A;
+  border: 1px solid #5C6371;
+}
+
+.itinerary-main{
+  background-color: #22252D;
+  height: calc(100vh - 35vh);
+  border-radius: 12px;
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.date-tabs {
+  margin-top: 20px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 19% 19% 19% 19% 19%;
+  gap: 4px;
+  margin-bottom: 20px;
+ 
+}
+
+.date-tabs div {
+  padding: 5px;
+  border-radius: 7px;
+  font-weight: 200 !important;
+  margin-bottom: 5px;
+  background-color:#181525 ;
+  color: white;
+  display: flex;
   justify-content: center;
 }
 
-.itinerary {
-  padding: 20px;
-}
-
-.itinerary h1{
-  color: white;
-  margin-bottom: 5px;
-}
-
-.itinerary-day {
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 10px;
+.date-tabs div.active {
+  color: #fff;
   background-color: #2E323A;
 }
 
-.itinerary-day h2 {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #572F2F;
-  border-radius: 10px;
-  color: #FF6B6B;
-}
-
-.itinerary-day p {
-  margin: 10px 0;
-  color: #FFFFFF;
-  background-color: #4e5054;
-  border-radius: 8px;
-}
-
-.detILS{
+.itinerary-details{
+  /* background-color: rgba(255, 255, 255, 0.9); */
   padding: 10px;
-  justify-content: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #373A42;
+  border-left: 4px solid #783FEF;
 }
 
-.itinerary-day a {
-  color: #FF6B6B;
-  text-decoration: none;
+.itinerary-day > div {
+  margin-bottom: 20px;
+}
+
+.date-day {
+  /* background-color: rgba(0, 123, 255, 0.1); */
+  border: 1px solid #838383;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.date-day h2:first-child{
+  color: #783FEF;
+  font-weight: 500;
+}
+
+.date-day h2:last-child{
+  color: #838383;
+  font-weight: 500;
+}
+
+.itidetails{
+  background-color: #2A2D34;
+  color: #CBCBCB;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.details-div {
+  border: 1px solid #838383;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #CBCBCB;
 }
 
 .distance-map{
+  height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #4e5054;
-  padding: 10px;
+}
+
+.mapp {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .tab-container,
+  .date-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-container button,
+  .date-tabs button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .details-div,
+  .places-to-visit ul {
+    padding: 10px;
+  }
+}
+
+
+/* places to visit */
+.place-main{
+  background-color: #22252D;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.places-to-visit h2{
+  margin-bottom: 20px;
+  color: #CBCBCB;
+  font-weight: 300;
+}
+
+.place{
+  background-color: #2A2D34;
+  margin-bottom: 10px;
+  padding: 5px 10px;
   border-radius: 8px;
+  border-left: 3px solid #783FEF;
 }
 
-.distance-map div{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  
+.place h3{
+  color: #838383;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 
-.distance-map div p{
-  margin: 0;
-}
 
-.distance p{
-  margin: 0;
+
+.place p{
+  color: #CBCBCB;
+  font-size: 12px;
 }
