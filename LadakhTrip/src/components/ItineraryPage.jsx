@@ -1,5 +1,12 @@
 // src/components/ItineraryPage.js
-import { ArrowLeft, Bike, Calendar, CalendarDays, LandPlot, MapPinnedIcon, StickyNote } from "lucide-react";
+import {
+  ArrowLeft,
+  Bike,
+  Calendar,
+  CalendarDays,
+  LandPlot,
+  StickyNote,
+} from "lucide-react";
 import "./Main.css";
 import { useState } from "react";
 import PlacesToVisitPage from "./Places";
@@ -8,82 +15,96 @@ const itinerary = [
   {
     date: "21 Sept",
     day: "Saturday",
-    details:
-      "Reach Leh by taking morning early flight. Take rest in the hotel. Evening Visit to Leh Palace, Santi Stupa and Leh Market.",
-    link: "https://www.google.com/travel/flights/booking?tfs=CBwQAho_EgoyMDI0LTA5LTIxIh8KA0RFTBIKMjAyNC0wOS0yMRoDSVhMKgJBSTIDNDQ1agcIARIDREVMcgcIARIDSVhMQAFIAXABggELCP___________wGYAQI&tfu=CmhDalJJV25waVdIVk5UR1J6UTFWQlExWkZkVUZDUnkwdExTMHRMUzB0ZEdKaWRHRXlNMEZCUVVGQlIyRlhURTFqU2twd1ZYTkJFZ1ZCU1RRME5Sb0tDTzhkRUFBYUEwbE9VamdjY040ahICCAAiAA&hl=en&gl=in&client=firefox-b-e&curr=INR",
-    distance: "",
-    time: "",
+    title: "Leh arrival",
+    description: [
+      "Arrive in Leh and get transported to the hotel where you will be welcomed traditionally.",
+      "Relax in the day for acclimatization.",
+      "Later, visit LEH\u2019s market and explore it completely.",
+      "Enjoy the Dinner and overnight stay at Hotel.",
+    ],
   },
   {
     date: "22 Sept",
     day: "Sunday",
-    details:
-      "Bike ride to Thiksey and Sangam. Visit Thiksey Monastery, Spituk Monastery, Gurudwara Pathar Sahib, Magnetic Hill, Sangam Point and Hall of fame.",
-    link: "https://maps.app.goo.gl/ESAnRAZ5fGW4ZoTv8",
-    distance: "100 KM",
-    time: "2 hr 30 min",
+    title: "Leh to Kargil",
+    description: [
+      "Wake up & post breakfast depart for Kargil.",
+      "Enroute you can cover Magnetic Hills, Gurudwara Pathir Sahib and Confluence of river.",
+      "From Leh, Lamayuru is approximately 125km that passes through Nimmu and Hangroo Loops.",
+      "Drive from Lamayuru to Kargil via Fotu La, Namika La and Mulbek.",
+      "Reach Kargil by evening & check in to the hotel.",
+      "Dinner & Sleep Overnight.",
+    ],
   },
   {
     date: "23 Sept",
     day: "Monday",
-    details:
-      "Leh-Kargil. On the way to Kargil, visit Lamayuru 'The Moon Land of Ladhak'. Spend the night in Kargil.",
-    link: "https://maps.app.goo.gl/26Fs4PeZdjVHgPaNA",
-    distance: "210 KM",
-    time: "4 hr 40 min",
+    title: "Kargil to Leh",
+    description: [
+      "Wake up early morning and post breakfast cover Kargil War memorial & drass, the Coldest inhabited place in India & often called as the gateway to Ladakh.",
+      "Reach leh, checkin the hotel, overnight stay in leh.",
+    ],
   },
   {
     date: "24 Sept",
     day: "Tuesday",
-    details:
-      "Early morning ride to Dras to see the Kargil War Memorial. On the way back, visit the LOC point from Hundurmaan. Lunch at Kargil and then drive back to Leh.",
-    link: "https://maps.app.goo.gl/hqUyqyKZaZEXXap76",
-    distance: "330 KM",
-    time: "7 hr 30 min",
+    title: "Leh to Nubra valley via Khardungla pass",
+    description: [
+      "Khardung La Pass;",
+      "Diskit Monastery",
+      "Hundar Sand dunes and Enjoy a double-humped Camel ride in the cold desert",
+      "Enjoy your dinner and stay overnight in Hunder.",
+    ],
   },
   {
     date: "25 Sept",
     day: "Wednesday",
-    details:
-      "Ride to Nubra Valley via Khardungla Pass. Visit Diskit Monastery and Hunder Sand Dunes.",
-    link: "https://maps.app.goo.gl/J3zPUYdmVssWVARH8",
-    distance: "116 KM",
-    time: "3 hr 30 min",
+    title: "Nubra valley To Pangong Lake via Shyok",
+    description: [
+      "This morning after breakfast, drive to Pangong Lake on the Indo China border.",
+      "Rides via shayok River route.",
+      "Dinner and overnight stay at Wooden cottage.",
+      "At midnight enjoy the Galaxy views from your cottage.",
+    ],
   },
   {
     date: "26 Sept",
     day: "Thursday",
-    details:
-      "Ride to Pangong Lake. Enjoy the scenic beauty and spend the night near the lake.",
-    link: "https://maps.app.goo.gl/1pArSmCT3Dcfk9gC8",
-    distance: "181 KM",
-    time: "4 hr 40 min",
+    title: "Pangong Lake to Hanle via Tsaga pass",
+    description: [
+      "Distance - Pangong Lake to hanle (280km) with landscape view and later enjoy the star gazing at hanle.",
+    ],
   },
   {
     date: "27 Sept",
     day: "Friday",
-    details:
-      "Ride to Tsomori. Enjoy the beautiful landscapes and spend the night at Tsomori.",
-    link: "https://maps.app.goo.gl/ytabUFgi5ayDdniJ9",
-    distance: "161 KM",
-    time: "4 hr 50 min",
+    title: "Hanle - Nurbula pass - Umlingla pass - Hanle - Tsomoriri Lake",
+    description: [
+      "Umlung La is the highest paved road and mountain pass in the world, located in Ladakh, India, on the ridgeline between Koyul Lungpa and the Indus River near Demchok. At an elevation of 19,024 feet (5,799 m).",
+      "Tso Moriri or Lake Moriri is a lake in the Changthang Plateau in Ladakh in Northern India. The lake and surrounding area are protected as the Tso Moriri Wetland Conservation Reserve.",
+      "Later, Dinner and overnight stay in Tsomoriri Lake.",
+    ],
   },
   {
     date: "28 Sept",
     day: "Saturday",
-    details:
-      "Ride back to Leh. Enjoy the last day in Leh with some local sightseeing.",
-    link: "https://maps.app.goo.gl/gE357i7N7TaBkz7j6",
-    distance: "220 KM",
-    time: "5 hr",
+    title: "Tsomoriri to Leh",
+    description: [
+      "After breakfast, embark your journey back to Leh.",
+      "Ride back through route passing chumathang hot spring and visit Thiksey gompa, Shey Gompa, and palace en-route.",
+      "Visit the actual 3-idiots Movie school.",
+      "Chumathang Famous for its hot spring which attracts many tourists all over the world, even the local people come every year to take the medicinal benefits from the hot spring.",
+    ],
   },
   {
     date: "29 Sept",
     day: "Sunday",
-    details: "Check out from the hotel and take the flight back to Delhi.",
-    link: "https://www.google.com/travel/flights/booking?tfs=CBwQAhpAEgoyMDI0LTA5LTI5IiAKA0lYTBIKMjAyNC0wOS0yORoDREVMKgI2RTIEMjU4NGoHCAESA0lYTHIHCAESA0RFTEABSAFwAYIBCwj___________8BmAEC&tfu=CmxDalJJZFZoSGNHSk5WelpqZUUxQlExTkhXV2RDUnkwdExTMHRMUzB0ZEdKaWNXY3hNRUZCUVVGQlIyRlhUSFJqVEcwNFpHdEJFZ1kyUlRJMU9EUWFDZ2lOTHhBQUdnTkpUbEk0SEhDdE9BPT0SAggAIgMKATA&hl=en&gl=in&client=firefox-b-e&curr=INR",
-    distance: "",
-    time: "",
+    title: "Departure from Leh",
+    description: [
+      "Post breakfast, depart from Leh for your onward journey.",
+      "We will drop you to the airport.",
+      "End your Leh Ladakh tour package with a bag full of memories.",
+    ],
   },
 ];
 
@@ -121,9 +142,38 @@ const ItineraryPage = () => {
         </div>
 
         <div className="details-trip">
-          <p style={{backgroundColor: "#F8BBD0", border: "#D81B60", color: "#D81B60" }}><span><Calendar width={12} color="#D81B60"/></span> {startDate} - {endDate}</p>
-          <p style={{backgroundColor: "#B3E5FC", border: "#03A9F4", color: "#03A9F4" }}><Bike width={12}/>{totalDistance} KM</p>
-          <p style={{backgroundColor: "#FFF9C4", border: "#FBC02D", color: "#FBC02D" }}><CalendarDays width={12}/>{totalDays} Days</p>
+          <p
+            style={{
+              backgroundColor: "#F8BBD0",
+              border: "#D81B60",
+              color: "#D81B60",
+            }}
+          >
+            <span>
+              <Calendar width={12} color="#D81B60" />
+            </span>{" "}
+            {startDate} - {endDate}
+          </p>
+          <p
+            style={{
+              backgroundColor: "#B3E5FC",
+              border: "#03A9F4",
+              color: "#03A9F4",
+            }}
+          >
+            <Bike width={12} />
+            {totalDistance} KM
+          </p>
+          <p
+            style={{
+              backgroundColor: "#FFF9C4",
+              border: "#FBC02D",
+              color: "#FBC02D",
+            }}
+          >
+            <CalendarDays width={12} />
+            {totalDays} Days
+          </p>
         </div>
 
         <div className="tab-container">
@@ -131,14 +181,14 @@ const ItineraryPage = () => {
             onClick={() => handleTabClick("itinerary")}
             className={selectedTab === "itinerary" ? "active" : ""}
           >
-            <StickyNote color="#DC7327"/>
+            <StickyNote color="#DC7327" />
             Itinerary
           </div>
           <div
             onClick={() => handleTabClick("places")}
             className={selectedTab === "places" ? "active" : ""}
           >
-            <LandPlot color="#2874AB"/>
+            <LandPlot color="#2874AB" />
             Places to Visit
           </div>
         </div>
@@ -163,13 +213,18 @@ const ItineraryPage = () => {
                   .map((day, index) => (
                     <div key={index} className="itinerary-day">
                       <div className="date-day">
-                        <h2>{day.date}</h2>
-                        <h2>{day.day}</h2>
+                        <h2>{day.date} {day.day}</h2>
+                        <h3>{day.title}</h3>
                       </div>
                       <div className="itidetails">
-                          <p>{day.details}</p>
-                        </div>
-                      <div className="details-div">
+                       
+                        <ul>
+                          {day.description.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      {/* <div className="details-div">
                         <div className="distance-map">
                           <div className="distancee">
                             {day.distance && (
@@ -193,7 +248,7 @@ const ItineraryPage = () => {
                             </a>
                           </div>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
               </div>
