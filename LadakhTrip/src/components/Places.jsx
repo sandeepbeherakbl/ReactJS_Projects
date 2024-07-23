@@ -57,11 +57,6 @@ const placesToVisit = [
     description: "A historic palace known for its architecture and views.",
     image: "https://indotoursadventures.com/public/storage/blogs/db9d06763eb1eb02138f891f42d5a5cf.jpeg", // Add image URL or path
   },
-  {
-    name: "3 Idiots School",
-    description: "The school featured in the movie '3 Idiots'.",
-    image: "https://discoverlehladakh.in/wp-content/uploads/2020/11/Rancho-school-wall-at-Shey-in-Leh-Ladakh-1130x530.jpg", // Add image URL or path
-  },
 ];
 
 const PlacesToVisitPage = () => {

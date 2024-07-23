@@ -17,10 +17,7 @@ const itinerary = [
     day: "Saturday",
     title: "Leh arrival",
     description: [
-      "Arrive in Leh and get transported to the hotel where you will be welcomed traditionally.",
-      "Relax in the day for acclimatization.",
-      "Later, visit LEH\u2019s market and explore it completely.",
-      "Enjoy the Dinner and overnight stay at Hotel.",
+      "Welcome at KUSHOK BAKULA RINPOCHE AIRPORT LEH rest the whole day and let your body acclimatize at Hotel. Overnight Stay at The Leh Hotel.",
     ],
   },
   {
@@ -28,12 +25,7 @@ const itinerary = [
     day: "Sunday",
     title: "Leh to Kargil",
     description: [
-      "Wake up & post breakfast depart for Kargil.",
-      "Enroute you can cover Magnetic Hills, Gurudwara Pathir Sahib and Confluence of river.",
-      "From Leh, Lamayuru is approximately 125km that passes through Nimmu and Hangroo Loops.",
-      "Drive from Lamayuru to Kargil via Fotu La, Namika La and Mulbek.",
-      "Reach Kargil by evening & check in to the hotel.",
-      "Dinner & Sleep Overnight.",
+      "Today the road offers much Breathtaking Landscape; we’ll feel Magnetic Hill today & take blesses of Gurudwara Pathar Sahib Sangam View. Moondland. Reach Kargil in the evening Overnight stay.",
     ],
   },
   {
@@ -41,59 +33,50 @@ const itinerary = [
     day: "Monday",
     title: "Kargil to Leh",
     description: [
-      "Wake up early morning and post breakfast cover Kargil War memorial & drass, the Coldest inhabited place in India & often called as the gateway to Ladakh.",
-      "Reach leh, checkin the hotel, overnight stay in leh.",
+      "After breakfast drive towards Kargil War Memorial. We will halt at Drass and pay homage to our War heroes at Kargil War Memorial, situated at Drass sector, Where 1999 war was fought. Visit Dah and Hanu Villages, the two “Aryan” Villages of Ladakh Reach Leh in the evening.",
     ],
   },
   {
     date: "24 Sept",
     day: "Tuesday",
-    title: "Leh to Nubra valley via Khardungla pass",
+    title: "Leh – Khardung La – Nubra Valley",
     description: [
-      "Khardung La Pass;",
-      "Diskit Monastery",
-      "Hundar Sand dunes and Enjoy a double-humped Camel ride in the cold desert",
-      "Enjoy your dinner and stay overnight in Hunder.",
+      "Start the journey to Khardung -La passes 18380 Ft. The highest motor-able road in The World. Further, continue the journey toward Nubra Valley. Enjoy the scenic beauty and reach Camp Site by evening.",
     ],
   },
   {
     date: "25 Sept",
     day: "Wednesday",
-    title: "Nubra valley To Pangong Lake via Shyok",
+    title: "Nubra Valley – Pangong TSO",
     description: [
-      "This morning after breakfast, drive to Pangong Lake on the Indo China border.",
-      "Rides via shayok River route.",
-      "Dinner and overnight stay at Wooden cottage.",
-      "At midnight enjoy the Galaxy views from your cottage.",
+      "We’ll see dunes in no-man land, enjoy camel ride & photoshoot. The route is less travelled, but the most adventures one. Be ready to test your riding skill. Reach Pangong Lake by afternoon. Spend the evening in Camps at lake. Enjoy dinner and overnight stay in camp. ",
     ],
   },
   {
     date: "26 Sept",
     day: "Thursday",
-    title: "Pangong Lake to Hanle via Tsaga pass",
+    title: "Pangong TSO –Hanle",
     description: [
-      "Distance - Pangong Lake to hanle (280km) with landscape view and later enjoy the star gazing at hanle.",
+      "The real beauty of Pangong Lake you will observe on this day. ",
+      "In chushul, we will visit Rezang La war memorial.",
+      "Hanle has a lovely Monastery offering some great aerial views of the whole village that is a home of about 1000 people with altitude of 4500 Mtrs. ",
+      "The Hanle Observatory is operated by the Indian Institute of Astrophysics, Bengaluru and currently the second highest optical observatory in the world, with an installed telescope of about 2.01 meters (6.5 feet) diameter.Overnight stay at Hanle.",
     ],
   },
   {
     date: "27 Sept",
     day: "Friday",
-    title: "Hanle - Nurbula pass - Umlingla pass - Hanle - Tsomoriri Lake",
+    title: " Hanle to Tso Moriri",
     description: [
-      "Umlung La is the highest paved road and mountain pass in the world, located in Ladakh, India, on the ridgeline between Koyul Lungpa and the Indus River near Demchok. At an elevation of 19,024 feet (5,799 m).",
-      "Tso Moriri or Lake Moriri is a lake in the Changthang Plateau in Ladakh in Northern India. The lake and surrounding area are protected as the Tso Moriri Wetland Conservation Reserve.",
-      "Later, Dinner and overnight stay in Tsomoriri Lake.",
+      "After breakfast travel to Tso-Moriri the route is less travelled and very scenic and confusing as there are hardly any markers for roads. Later after the photoshoot continue journey toward Tso Moriri. Another beautiful Lake famous for sky blue water. Reach karzok in the evening. Overnight stay at Tso Moriri.Overnight stay at a hotel in Leh.",
     ],
   },
   {
     date: "28 Sept",
     day: "Saturday",
-    title: "Tsomoriri to Leh",
+    title: " Tso Moriri to Leh",
     description: [
-      "After breakfast, embark your journey back to Leh.",
-      "Ride back through route passing chumathang hot spring and visit Thiksey gompa, Shey Gompa, and palace en-route.",
-      "Visit the actual 3-idiots Movie school.",
-      "Chumathang Famous for its hot spring which attracts many tourists all over the world, even the local people come every year to take the medicinal benefits from the hot spring.",
+      "After breakfast start the journey toward Leh. On the way we will witness 2 beautiful lakes, Tso Moriri and Tso Kar. Enjoy the most beautiful sights that will take your breath away but a mix of good and bad roads await us on our way to Leh. We will cross the Tanglangla Pass. Reach Leh in the evening, and enjoy an overnight stay in camps with Dinner.",
     ],
   },
   {
@@ -101,9 +84,7 @@ const itinerary = [
     day: "Sunday",
     title: "Departure from Leh",
     description: [
-      "Post breakfast, depart from Leh for your onward journey.",
-      "We will drop you to the airport.",
-      "End your Leh Ladakh tour package with a bag full of memories.",
+      "Today is the last day of this adventurous trip. You can leave back for your home today, but you won’t be going alone. You will be taking lots of fun memories, which you will cherish for a long time.",
     ],
   },
 ];
@@ -162,7 +143,7 @@ const ItineraryPage = () => {
             }}
           >
             <Bike width={12} />
-            {totalDistance} KM
+            1300+ KM
           </p>
           <p
             style={{
@@ -213,11 +194,12 @@ const ItineraryPage = () => {
                   .map((day, index) => (
                     <div key={index} className="itinerary-day">
                       <div className="date-day">
-                        <h2>{day.date} {day.day}</h2>
+                        <h2>
+                          {day.date} {day.day}
+                        </h2>
                         <h3>{day.title}</h3>
                       </div>
                       <div className="itidetails">
-                       
                         <ul>
                           {day.description.map((item, i) => (
                             <li key={i}>{item}</li>
