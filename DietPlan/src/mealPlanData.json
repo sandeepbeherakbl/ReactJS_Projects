@@ -1,0 +1,91 @@
+{
+  "meals": [
+    {
+      "time": "7:00 AM",
+      "plan": "1 glass Water + 1 garlic",
+      "carbs": 0,
+      "protein": 0,
+      "fiber": 0,
+      "fat": 0
+    },
+    {
+      "time": "8:30 AM",
+      "plan": "Oats Shake (milk-250gm + Oats-50gm + 1 banana + peanutbutter + mixnuts)",
+      "carbs": 79,
+      "protein": 20,
+      "fiber": 10,
+      "fat": 26
+    },
+    {
+      "time": "9:00 AM",
+      "plan": "3 eggs + 2 bread",
+      "carbs": 25,
+      "protein": 24,
+      "fiber": 2,
+      "fat": 17
+    },
+    {
+      "time": "12:00 PM",
+      "plan": "150 GM Paneer or 50gm Soyabean",
+      "carbs": "6-17",
+      "protein": "18-25",
+      "fiber": "0-8",
+      "fat": "9-20"
+    },
+    {
+      "time": "2:00 PM",
+      "plan": "(dal + chawal + salad + sabji) or (dal + chawal 200gm + dahi + salad + chicken or fish)",
+      "carbs": "72-85",
+      "protein": "16-45",
+      "fiber": "11-15",
+      "fat": "6.6-13"
+    },
+    {
+      "time": "4:00 PM",
+      "plan": "Seasonal Fruit (e.g., Apple)",
+      "carbs": 25,
+      "protein": 0,
+      "fiber": 4,
+      "fat": 0
+    },
+    {
+      "time": "5:00 PM",
+      "plan": "1 Parle-G Biscuit",
+      "carbs": 4,
+      "protein": 0.3,
+      "fiber": 0,
+      "fat": 1
+    },
+    {
+      "time": "6:00 PM",
+      "plan": "1 Banana + milk 250gm + Oats 50gm",
+      "carbs": 73,
+      "protein": 14,
+      "fiber": 8,
+      "fat": 11
+    },
+    {
+      "time": "9:00 PM",
+      "plan": "Protein + creatine",
+      "carbs": 3,
+      "protein": 25,
+      "fiber": 0,
+      "fat": 2
+    },
+    {
+      "time": "10:30 PM",
+      "plan": "Dinner (Aalo + roti + salad + sabji + 2 eggs) or (Aalo + roti + salad + 50gm fish + 2 eggs)",
+      "carbs": "71-76",
+      "protein": "23-29",
+      "fiber": 12,
+      "fat": "17-22"
+    }
+  ],
+  "totals": {
+    "carbs": 317,
+    "protein": 164,
+    "fiber": 54,
+    "fat": 90.1,
+    "calories": 2734.9
+  }
+}
